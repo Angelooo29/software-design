@@ -1,7 +1,7 @@
 ﻿namespace lab3
 {
     partial class Form1
-    {       
+    {
         private System.ComponentModel.IContainer components = null;
 
         /// <param name "disposing"
@@ -25,10 +25,11 @@
             // btnShowInfo
             // 
             btnShowInfo.Anchor = AnchorStyles.None;
-            btnShowInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnShowInfo.Location = new Point(70, 158);
+            btnShowInfo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnShowInfo.Location = new Point(198, 195);
+            btnShowInfo.Margin = new Padding(3, 4, 3, 4);
             btnShowInfo.Name = "btnShowInfo";
-            btnShowInfo.Size = new Size(127, 52);
+            btnShowInfo.Size = new Size(118, 55);
             btnShowInfo.TabIndex = 0;
             btnShowInfo.Text = "Show Info";
             btnShowInfo.UseVisualStyleBackColor = true;
@@ -38,19 +39,20 @@
             // 
             lstBookTypes.Anchor = AnchorStyles.None;
             lstBookTypes.FormattingEnabled = true;
-            lstBookTypes.ItemHeight = 15;
-            lstBookTypes.Location = new Point(266, 51);
+            lstBookTypes.Location = new Point(431, 53);
+            lstBookTypes.Margin = new Padding(3, 4, 3, 4);
             lstBookTypes.Name = "lstBookTypes";
-            lstBookTypes.Size = new Size(477, 349);
+            lstBookTypes.Size = new Size(386, 464);
             lstBookTypes.TabIndex = 1;
             // 
             // btnShowAll
             // 
             btnShowAll.Anchor = AnchorStyles.None;
-            btnShowAll.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnShowAll.Location = new Point(70, 240);
+            btnShowAll.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnShowAll.Location = new Point(198, 286);
+            btnShowAll.Margin = new Padding(3, 4, 3, 4);
             btnShowAll.Name = "btnShowAll";
-            btnShowAll.Size = new Size(127, 52);
+            btnShowAll.Size = new Size(118, 55);
             btnShowAll.TabIndex = 2;
             btnShowAll.Text = "Show All";
             btnShowAll.UseVisualStyleBackColor = true;
@@ -58,13 +60,14 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(914, 600);
             Controls.Add(btnShowAll);
             Controls.Add(lstBookTypes);
             Controls.Add(btnShowInfo);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bookstore System";
