@@ -25,11 +25,11 @@
             // btnShowInfo
             // 
             btnShowInfo.Anchor = AnchorStyles.None;
-            btnShowInfo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShowInfo.Location = new Point(198, 195);
+            btnShowInfo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnShowInfo.Location = new Point(163, 159);
             btnShowInfo.Margin = new Padding(3, 4, 3, 4);
             btnShowInfo.Name = "btnShowInfo";
-            btnShowInfo.Size = new Size(118, 55);
+            btnShowInfo.Size = new Size(100, 35);
             btnShowInfo.TabIndex = 0;
             btnShowInfo.Text = "Show Info";
             btnShowInfo.UseVisualStyleBackColor = true;
@@ -39,20 +39,20 @@
             // 
             lstBookTypes.Anchor = AnchorStyles.None;
             lstBookTypes.FormattingEnabled = true;
-            lstBookTypes.Location = new Point(431, 53);
+            lstBookTypes.Location = new Point(361, 58);
             lstBookTypes.Margin = new Padding(3, 4, 3, 4);
             lstBookTypes.Name = "lstBookTypes";
-            lstBookTypes.Size = new Size(386, 464);
+            lstBookTypes.Size = new Size(320, 344);
             lstBookTypes.TabIndex = 1;
             // 
             // btnShowAll
             // 
             btnShowAll.Anchor = AnchorStyles.None;
-            btnShowAll.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShowAll.Location = new Point(198, 286);
+            btnShowAll.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnShowAll.Location = new Point(163, 250);
             btnShowAll.Margin = new Padding(3, 4, 3, 4);
             btnShowAll.Name = "btnShowAll";
-            btnShowAll.Size = new Size(118, 55);
+            btnShowAll.Size = new Size(100, 35);
             btnShowAll.TabIndex = 2;
             btnShowAll.Text = "Show All";
             btnShowAll.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(782, 453);
             Controls.Add(btnShowAll);
             Controls.Add(lstBookTypes);
             Controls.Add(btnShowInfo);
