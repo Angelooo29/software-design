@@ -80,7 +80,7 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(17, 94);
+            label1.Location = new Point(26, 94);
             label1.Name = "label1";
             label1.Size = new Size(98, 20);
             label1.TabIndex = 3;
@@ -140,13 +140,14 @@
             // btnSearchBooks
             // 
             btnSearchBooks.Anchor = AnchorStyles.None;
+            btnSearchBooks.BackColor = Color.LightGray;
             btnSearchBooks.Location = new Point(628, 13);
             btnSearchBooks.Margin = new Padding(3, 4, 3, 4);
             btnSearchBooks.Name = "btnSearchBooks";
             btnSearchBooks.Size = new Size(100, 35);
             btnSearchBooks.TabIndex = 9;
             btnSearchBooks.Text = "Search";
-            btnSearchBooks.UseVisualStyleBackColor = true;
+            btnSearchBooks.UseVisualStyleBackColor = false;
             btnSearchBooks.Click += btnSearchBooks_Click;
             // 
             // txtSearchTitle

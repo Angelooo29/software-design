@@ -26,7 +26,7 @@
             // 
             btnShowInfo.Anchor = AnchorStyles.None;
             btnShowInfo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShowInfo.Location = new Point(163, 159);
+            btnShowInfo.Location = new Point(257, 405);
             btnShowInfo.Margin = new Padding(3, 4, 3, 4);
             btnShowInfo.Name = "btnShowInfo";
             btnShowInfo.Size = new Size(100, 35);
@@ -39,17 +39,17 @@
             // 
             lstBookTypes.Anchor = AnchorStyles.None;
             lstBookTypes.FormattingEnabled = true;
-            lstBookTypes.Location = new Point(361, 58);
+            lstBookTypes.Location = new Point(62, 23);
             lstBookTypes.Margin = new Padding(3, 4, 3, 4);
             lstBookTypes.Name = "lstBookTypes";
-            lstBookTypes.Size = new Size(320, 344);
+            lstBookTypes.Size = new Size(654, 364);
             lstBookTypes.TabIndex = 1;
             // 
             // btnShowAll
             // 
             btnShowAll.Anchor = AnchorStyles.None;
             btnShowAll.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShowAll.Location = new Point(163, 250);
+            btnShowAll.Location = new Point(406, 405);
             btnShowAll.Margin = new Padding(3, 4, 3, 4);
             btnShowAll.Name = "btnShowAll";
             btnShowAll.Size = new Size(100, 35);
