@@ -80,7 +80,7 @@
             // btnAddBook
             // 
             btnAddBook.BackColor = Color.LightSkyBlue;
-            btnAddBook.Location = new Point(41, 236);
+            btnAddBook.Location = new Point(37, 266);
             btnAddBook.Name = "btnAddBook";
             btnAddBook.Size = new Size(100, 35);
             btnAddBook.TabIndex = 2;
@@ -91,7 +91,7 @@
             // btnExportBooks
             // 
             btnExportBooks.BackColor = Color.Plum;
-            btnExportBooks.Location = new Point(186, 236);
+            btnExportBooks.Location = new Point(182, 266);
             btnExportBooks.Name = "btnExportBooks";
             btnExportBooks.Size = new Size(114, 35);
             btnExportBooks.TabIndex = 3;
@@ -101,7 +101,7 @@
             // 
             // txtAuthorName
             // 
-            txtAuthorName.Location = new Point(132, 143);
+            txtAuthorName.Location = new Point(128, 173);
             txtAuthorName.Name = "txtAuthorName";
             txtAuthorName.Size = new Size(188, 27);
             txtAuthorName.TabIndex = 1;
@@ -109,7 +109,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(19, 146);
+            label1.Location = new Point(15, 176);
             label1.Name = "label1";
             label1.Size = new Size(98, 20);
             label1.TabIndex = 7;
@@ -118,7 +118,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(41, 94);
+            label2.Location = new Point(37, 124);
             label2.Name = "label2";
             label2.Size = new Size(76, 20);
             label2.TabIndex = 9;
@@ -126,7 +126,7 @@
             // 
             // txtBookTitle
             // 
-            txtBookTitle.Location = new Point(132, 91);
+            txtBookTitle.Location = new Point(128, 121);
             txtBookTitle.Name = "txtBookTitle";
             txtBookTitle.Size = new Size(188, 27);
             txtBookTitle.TabIndex = 0;
