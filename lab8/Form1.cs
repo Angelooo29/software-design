@@ -2,38 +2,12 @@ using Newtonsoft.Json.Linq;
 
 namespace lab8
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-
-        //public async Task<string> GetBookInfoFromAPIAsync(string isbn)
-        //{
-        //    string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q=isbn:{isbn}";
-        //    using (HttpClient client = new HttpClient())
-        //    {
-        //        var response = await client.GetStringAsync(apiUrl);
-        //        var jsonResponse = JObject.Parse(response);
-
-        //        if (jsonResponse["items"] != null && jsonResponse["items"].HasValues)
-        //        {
-        //            var title = jsonResponse["items"][0]["volumeInfo"]["title"]?.ToString() ?? "No Title";
-
-        //            var authorToken = jsonResponse["items"][0]["volumeInfo"]["authors"];
-        //            var authors = authorToken != null
-        //                ? string.Join(", ", authorToken.Select(a => a.ToString()))
-        //                : "Unknown Author";
-
-        //            return $"Title: {title}\nAuthors: {authors}";
-        //        }
-        //        else
-        //        {
-        //            return "No book found for this ISBN.";
-        //        }
-        //    }
-        //}
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
         private async void btnFetchBooks_Click(object sender, EventArgs e)
         {
@@ -96,14 +70,14 @@ namespace lab8
         }
 
         public async Task<string> GetBookInfoWithErrorHandlingAsync(string isbn)
-		{
-			string apiUrl = $"https://www.googleapis.com/book/v1/volumes?q=isbn:{isbn}";
-			try
-			{
-				using (HttpClient client = new HttpClient())
-				{
-					var response = await client.GetStringAsync(apiUrl);
-					var jsonResponse = JObject.Parse(response);
+        {
+            string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q=isbn:{isbn}";
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    var response = await client.GetStringAsync(apiUrl);
+                    var jsonResponse = JObject.Parse(response);
 
                     var title = jsonResponse["items"]?[0]?["volumeInfo"]?["title"]?.ToString() ?? "No Title Found"; ;
                     var authorList = jsonResponse["items"]?[0]?["volumeInfo"]?["authors"];
@@ -112,16 +86,63 @@ namespace lab8
                         : "Unknown Author";
 
                     return $"Title: {title}\nAuthors: {authors}";
-				}
-			}
-			catch (HttpRequestException)
-			{
-				return "Error: Unable to fetch data from API. Please check your connection or try again later.";
-			}
-			catch (Exception ex)
-			{
-				return $"Error: {ex.Message}";
-			}
-		}
-	}
+                }
+            }
+            catch (HttpRequestException)
+            {
+                return "Error: Unable to fetch data from API. Please check your connection or try again later.";
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
+
+       // ------------------- Lab Exercise 8. Student Challenge Task 3 -------------------
+        private async void btnSearchAuthor_Click(object sender, EventArgs e)
+        {
+            string author = txtAuthorSearch.Text.Trim();
+
+            if (string.IsNullOrEmpty(author))
+            {
+                MessageBox.Show("Please enter an author name.");
+                return;
+            }
+
+            await SearchBooksByAuthorAsync(author);
+        }
+
+        public async Task SearchBooksByAuthorAsync(string authorName)
+        {
+            string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q=inauthor:{Uri.EscapeDataString(authorName)}";
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    var response = await client.GetStringAsync(apiUrl);
+                    var json = JObject.Parse(response);
+
+                    lstAuthorBooks.Items.Clear();
+
+                    if (json["items"] != null)
+                    {
+                        foreach (var item in json["items"])
+                        {
+                            string title = item["volumeInfo"]?["title"]?.ToString() ?? "Unknown Title";
+                            lstAuthorBooks.Items.Add(title);
+                        }
+                    }
+                    else
+                    {
+                        lstAuthorBooks.Items.Add("No books found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Author Search Error: {ex.Message}");
+            }
+        }
+    }
 }
